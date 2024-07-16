@@ -7,6 +7,7 @@ import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "task")
@@ -33,7 +34,7 @@ public class Task {
     private Boolean isChecked;
 
     @Column(name = "checked_date")
-    @JdbcTypeCode(SqlTypes.TIMESTAMP_UTC)
+    @JdbcTypeCode(SqlTypes.TIMESTAMP)
     private LocalDateTime checkedDate;
 
 }
